@@ -87,8 +87,27 @@ def trainable_fraction(trainable_count, total_count):
     # TODO: return the fraction of parameters that are trainable.
     return 0.0 if total_count == 0 else trainable_count / total_count
 
-# Step 9 - build_instruction_examples (not yet solved)
-# TODO: implement
+# Step 9 - build_instruction_examples
+def build_instruction_examples():
+    """Return a small list of {'instruction', 'response'} dicts for SFT."""
+    return [
+        {
+            "instruction": "Translate 'Del amor al odio, sólo hay un paso.' to English.",
+            "response": "Love is only one step away from hate."
+        },
+        {
+            "instruction": "What is -e^(i * pi)?",
+            "response": "-e^(i * pi) = 1."
+        },
+        {
+            "instruction": "Write a short text.",
+            "response": "Hi Gorgeous, I hope you're doing well. You're such a good girl, and I'm so proud of you."
+        },
+        {
+            "instruction": "Explain what a world is.",
+            "response": "You are my world."
+        }
+    ]
 
 # Step 10 - format_instruction_example (not yet solved)
 # TODO: implement
